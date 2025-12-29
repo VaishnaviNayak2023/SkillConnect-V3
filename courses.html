@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon"></i> 
+    </button>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">SkillConnect</a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#mentors">Mentors</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-header">
+            <div class="container">
+                <h2>Find Your Next <span class="gradient-text">Skill</span></h2>
+                <p style="color: var(--color-text-secondary);">Browse over 2,000 professional courses taught by experts.</p>
+
+                <form id="course-search-form" class="search-input-container">
+                    <input type="text" id="search-input" placeholder="Search for courses, skills, or mentors..." aria-label="Search courses">
+                    <button type="submit" aria-label="Search">
+                        <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+                    </button>
+                </form>
+
+                <div class="category-chips">
+                    <div class="chip active" data-category="">All Categories</div>
+                    <div class="chip" data-category="tech">Technology</div>
+                    <div class="chip" data-category="design">Design</div>
+                    <div class="chip" data-category="program">Programming</div>
+                    <div class="chip" data-category="marketing">Marketing</div>
+                    <div class="chip" data-category="business">Business</div>
+                    <div class="chip" data-category="health">Health</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="floating-card-section">
+            <div class="floating-card">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+                    <div style="text-align: left;">
+                        <h3 style="margin-bottom: 5px;">Join the #1 Learning Platform</h3>
+                        <p style="color: #fff; opacity: 0.8; font-size: 1rem;">Start connecting with top mentors today!</p>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary" style="background: #fff; color: var(--color-primary); min-width: 150px;">Sign Up Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-course-listing" id="course-listing">
+            <div class="container">
+                <h3>Top Results</h3>
+                <div class="course-grid" id="course-results">
+                    
+                    <a href="#" class="card course-card">
+                        <img src="images/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="Python Web Development" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">John Smith</p>
+                            <h4>Python Web Development Bootcamp</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 80 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 18 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card course-card">
+                        <img src="images/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg" alt="Modern UI/UX Design" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Sarah Lee</p>
+                            <h4>Modern UI/UX Design Fundamentals</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 45 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 12 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card course-card">
+                        <img src="images/kira-auf-der-heide-9P7WD1dU5VQ-unsplash.jpg" alt="Advanced SEO Strategies" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Alex Wang</p>
+                            <h4>Advanced SEO Strategies & Tools</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 30 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 10 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.6</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card course-card">
+                        <img src="images/markus-winkler-kA7zREkzrBw-unsplash.jpg" alt="Data Science with R" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Emily Cooper</p>
+                            <h4>Foundations of Data Science with R</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 65 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 22 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="card course-card">
+                        <img src="images/shubham-dhage-eJqEB_nEQt0-unsplash.jpg" alt="Cloud Infrastructure Management" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Markus Hill</p>
+                            <h4>Cloud Infrastructure Management (AWS)</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 90 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 25 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card course-card">
+                        <img src="images/markus-spiske-XrIfY_4cK1w-unsplash.jpg" alt="Financial Modeling" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Jane Doe</p>
+                            <h4>Introduction to Financial Modeling</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 40 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 15 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.5</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card course-card">
+                        <img src="images/tourbox-lwiESfzrVM4-unsplash.jpg" alt="Digital Painting" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Mia Chen</p>
+                            <h4>Digital Painting for Beginners</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 50 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 14 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card course-card">
+                        <img src="images/bernd-dittrich-PKqxOOQqN64-unsplash.jpg" alt="Advanced Java Development" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Raj Patel</p>
+                            <h4>Advanced Java Development & Spring</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 70 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 20 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommended-section">
+            <div class="container">
+                <h3 style="margin-bottom: 30px;">Recommended for You</h3>
+                <div class="course-grid" id="recommended-courses">
+                    
+                    <a href="#" class="card course-card">
+                        <img src="img/course-recommend1.jpg" alt="JavaScript Pro" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Chris Evans</p>
+                            <h4>JavaScript Pro: Modern Features</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 35 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 9 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card course-card">
+                        <img src="img/course-recommend2.jpg" alt="Figma Masterclass" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Ava Lee</p>
+                            <h4>Figma Masterclass for UI/UX</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 20 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 7 Lessons</span>
+                                <span><i data-lucide="star" style="width:14px; height:14px; vertical-align: middle; color: gold; fill: gold;"></i> 4.6</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="card course-card">
+                        <img src="img/course-recommend3.jpg" alt="Python Fundamentals" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">John Smith</p>
+                            <h4>Python Fundamentals (Beginner)</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 50 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 15 Lessons</span>
+                            </div>
+                            </div>
+                    </a>
+
+                    <a href="#" class="card course-card">
+                        <img src="img/course-recommend4.jpg" alt="Digital Strategy" loading="lazy">
+                        <div class="course-card-content">
+                            <p style="font-size: 0.8rem; color: var(--color-primary);">Priya Sharma</p>
+                            <h4>Building a Digital Strategy</h4>
+                            <div class="course-meta">
+                                <span><i data-lucide="clock" style="width:14px; height:14px; vertical-align: middle;"></i> 15 Hours</span>
+                                <span><i data-lucide="book" style="width:14px; height:14px; vertical-align: middle;"></i> 5 Lessons</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mentors-section">
+            <div class="container">
+                <h3 style="margin-bottom: 30px;">Taught by Our Experts</h3>
+                <div class="mentor-grid">
+                    <div class="card mentor-item">
+                        <img src="img/mentor1.jpg" alt="Mentor Emily Cooper" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                        <h5>Emily Cooper</h5>
+                        <p>Web Development</p>
+                    </div>
+                    <div class="card mentor-item">
+                        <img src="img/mentor2.jpg" alt="Mentor John Smith" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                        <h5>John Smith</h5>
+                        <p>Data Science</p>
+                    </div>
+                    <div class="card mentor-item">
+                        <img src="img/mentor3.jpg" alt="Mentor Sarah Lee" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                        <h5>Sarah Lee</h5>
+                        <p>UI/UX Design</p>
+                    </div>
+                    <div class="card mentor-item">
+                        <img src="img/mentor4.jpg" alt="Mentor Alex Wang" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                        <h5>Alex Wang</h5>
+                        <p>Digital Marketing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section style="padding: 80px 20px; background-color: var(--color-light); transition: background-color 0.4s;">
+            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 30px;">
+                <div style="flex: 1; position: relative;">
+                    <h3 style="margin-bottom: 30px; font-weight: 600;">What our students say</h3>
+                    <img src="img/student-feedback.jpg" alt="Happy student" style="width: 100%; max-width: 350px; height: auto; border-radius: 20px; box-shadow: var(--shadow-soft);">
+                </div>
+                
+                <div style="flex: 2; display: flex; flex-direction: column; justify-content: center; padding-left: 50px;">
+                    <div style="background-color: var(--color-card-bg); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-soft); margin-bottom: 30px;">
+                        <p style="font-style: italic; color: var(--color-text-secondary);">
+                            "TOTC provided the perfect balance of challenging material and helpful mentorship. I successfully switched careers in under a year. Highly recommended!"
+                        </p>
+                        <p style="margin-top: 15px; font-weight: 600; color: var(--color-primary);">- Aisha M., Design Graduate</p>
+                    </div>
+                    
+                    <h4 style="font-weight: 500; margin-bottom: 15px;">Meet your fellow learners:</h4>
+                    <div style="display: flex; gap: 10px;">
+                        <img src="img/avatar1.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <img src="img/avatar2.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <img src="img/avatar3.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <img src="img/avatar4.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                        <span style="display: flex; align-items: center; font-size: 0.9rem; color: var(--color-text-secondary);">+15k more</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-resources" style="padding-bottom: 100px;">
+            <div class="container">
+                <h3 style="margin-bottom: 30px;">Top Seller Offers and Discounts</h3>
+                <div class="news-grid">
+                    <div class="card news-card" style="position: relative;">
+                        <span style="position: absolute; top: 15px; left: 15px; background: red; color: white; padding: 5px 10px; border-radius: 5px; font-weight: 600;">50%</span>
+                        <img src="img/discount1.jpg" alt="Discount image 1" loading="lazy">
+                        <h4>Master Web Coding Bundle</h4>
+                        <p>All-in-one package for front-end and back-end mastery.</p>
+                        <a href="#">View Offer &rarr;</a>
+                    </div>
+                    <div class="card news-card" style="position: relative;">
+                         <span style="position: absolute; top: 15px; left: 15px; background: var(--color-primary); color: white; padding: 5px 10px; border-radius: 5px; font-weight: 600;">10%</span>
+                        <img src="img/discount2.jpg" alt="Discount image 2" loading="lazy">
+                        <h4>Creative Design Bootcamp</h4>
+                        <p>Learn Adobe Suite, Figma, and basic typography skills.</p>
+                        <a href="#">View Offer &rarr;</a>
+                    </div>
+                    <div class="card news-card" style="position: relative;">
+                         <span style="position: absolute; top: 15px; left: 15px; background: red; color: white; padding: 5px 10px; border-radius: 5px; font-weight: 600;">50%</span>
+                        <img src="img/discount3.jpg" alt="Discount image 3" loading="lazy">
+                        <h4>Data Science & AI Certification</h4>
+                        <p>Python, Machine Learning, and deployment techniques.</p>
+                        <a href="#">View Offer &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">SkillConnect</div>
+                    <p style="color: #ccc;">Unlock Your Potential. Let’s Skill Up!</p>
+                    
+                    <h5 style="margin-top: 30px;">Newsletter</h5>
+                    <p style="color: #ccc; font-size: 0.9rem;">Subscribe for our latest news and offers.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required style="padding: 12px 20px; border: none; outline: none; flex-grow: 1; font-size: 1rem; border-radius: 50px 0 0 50px;">
+                        <button type="submit" class="btn btn-primary" style="border-radius: 0 50px 50px 0; padding: 12px 25px; min-width: 120px;">Subscribe</button>
+                    </form>
+                    <div id="subscribe-message" style="margin-top: 10px; font-size: 0.9rem; color: #fff;"></div>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="mentors.html">Find a Mentor</a></li>
+                        <li><a href="blog.html">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="helpc.html">Help Center</a></li>
+                        <li><a href="career.html">Career Opportunities</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Policies</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="termsofservice.html">Terms of Service</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2025 SkillConnect. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize icons and theme toggle on DOM load
+        document.addEventListener('DOMContentLoaded', () => {
+             // Theme toggle setup logic (must be present in script.js)
+             if (window.initThemeAndIcons) {
+                 window.initThemeAndIcons();
+             } else {
+                 lucide.createIcons();
+             }
+             
+             // Ensure mobile menu toggle works
+             const menuToggle = document.getElementById('menu-toggle');
+             const navLinks = document.getElementById('nav-links');
+
+             if (menuToggle && navLinks) {
+                 menuToggle.addEventListener('click', () => {
+                     navLinks.classList.toggle('active');
+                 });
+             }
+             
+             // Disable static search form submission for a clean user experience
+             const searchForm = document.getElementById('course-search-form');
+             if (searchForm) {
+                 searchForm.addEventListener('submit', (e) => {
+                     e.preventDefault();
+                     alert('Search functionality is ready in courses.php, but currently disabled to show static content.');
+                 });
+             }
+        });
+    </script>
+</body>
+</html>

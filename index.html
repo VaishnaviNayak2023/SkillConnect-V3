@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTC - Unlock Your Potential: Let's Skill Up!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">SkillConnect</a>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#mentors">Mentors</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon"></i> 
+    </button>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>
+                        <span class="gradient-text">Unlock Your Potential:</span> 
+                        <br>Let’s Skill Up!
+                    </h1>
+                    <p>
+                        Explore thousands of courses taught by industry experts. 
+                        Start your journey to career growth today with personalized mentorship.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                        <a href="#mentors" class="btn btn-secondary">Find Mentor</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/portrait-teenage-pretty-girl-holding-stack-books-smiley-pink-education-teenge-concept-removebg-preview.png" alt="Student holding books" loading="eager" style="width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow-soft);">
+                </div>
+            </div>
+        </section>
+        
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 class="gradient-text">15k+</h3>
+                        <p>Students</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="gradient-text">75%</h3>
+                        <p>Trial Success</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="gradient-text">35</h3>
+                        <p>Mentors</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="gradient-text">26</h3>
+                        <p>Chat Experts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <div class="container text-center">
+                <h2>How It <span class="gradient-text">Works</span></h2>
+                <p style="color: var(--color-text-secondary);">Simple steps to start your e-learning journey.</p>
+                
+                <div class="grid-3">
+                    <div class="card work-step">
+                        <div class="icon-bg" style="background-color: rgba(0, 188, 212, 0.1);">
+                            <i data-lucide="compass" style="color: #00bcd4;"></i>
+                        </div>
+                        <h4>Discover Courses</h4>
+                        <p>Explore a vast library of industry-relevant courses tailored to your goals.</p>
+                    </div>
+                    <div class="card work-step">
+                        <div class="icon-bg" style="background-color: rgba(142, 36, 170, 0.1);">
+                            <i data-lucide="users" style="color: #8e24aa;"></i>
+                        </div>
+                        <h4>Connect with Mentors</h4>
+                        <p>Get personalized, one-on-one guidance from certified industry professionals.</p>
+                    </div>
+                    <div class="card work-step">
+                        <div class="icon-bg" style="background-color: rgba(76, 175, 80, 0.1);">
+                            <i data-lucide="layout-list" style="color: #4CAF50;"></i>
+                        </div>
+                        <h4>Build Your Portfolio</h4>
+                        <p>Complete hands-on projects and gain a portfolio to showcase your new skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skillconnect" id="about">
+            <div class="container skillconnect-content">
+                <div class="skillconnect-text">
+                    <h2 class="gradient-text">What is SkillConnect?</h2>
+                    <p>SkillConnect is more than an e-learning platform; it's a bridge connecting ambitious students with dedicated, vetted mentors and a vibrant learning community.</p>
+                    <p>Our mission is to make high-quality, project-based education accessible to everyone, ensuring career readiness through real-world skills.</p>
+                    
+                    <div class="mentor-student-cards">
+                        <a href="#" class="card role-card card-mentor" style="background-image: url('images/tuyen-vo-7o7DqXJArf4-unsplash.jpg');">
+                            <i data-lucide="award" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                            <h3>For Mentors</h3>
+                            <p style="font-size: 0.9rem;">Share your expertise and earn.</p>
+                        </a>
+                        <a href="#" class="card role-card card-student" style="background-image: url('images/hiroyoshi-urushima-vfRkE_9wuPo-unsplash.jpg');">
+                            <i data-lucide="graduation-cap" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                            <h3>For Students</h3>
+                            <p style="font-size: 0.9rem;">Learn from the best, hands-on.</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="learn-content" id="learn-everything" style="display: block; margin-top: 40px;">
+                    <div class="learn-text">
+                        <h2 class="gradient-text">Everything you can learn...</h2>
+                        <p style="color: var(--color-text-secondary);">From coding to creative arts, our curriculum is designed to cover the most in-demand skills needed in today’s job market.</p>
+                        <ul class="learn-list">
+                            <li><i data-lucide="check" style="color: #4CAF50; width: 18px; display: inline-block; margin-right: 10px;"></i> Advanced Web Development</li>
+                            <li><i data-lucide="check" style="color: #4CAF50; width: 18px; display: inline-block; margin-right: 10px;"></i> Data Science & AI</li>
+                            <li><i data-lucide="check" style="color: #4CAF50; width: 18px; display: inline-block; margin-right: 10px;"></i> Digital Marketing & SEO</li>
+                            <li><i data-lucide="check" style="color: #4CAF50; width: 18px; display: inline-block; margin-right: 10px;"></i> Creative Design & UI/UX</li>
+                            <li><i data-lucide="check" style="color: #4CAF50; width: 18px; display: inline-block; margin-right: 10px;"></i> Financial Analysis & Modeling</li>
+                        </ul>
+                    </div>
+                    <div class="learn-image" style="margin-top: 20px;">
+                        <img src="img/classroom-bg.jpg" alt="Modern classroom" loading="lazy" style="width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow-soft);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container text-center">
+                <h2>Our Key <span class="gradient-text">Features</span></h2>
+                <p style="color: var(--color-text-secondary);">Tools and resources built for your success.</p>
+
+                <div class="features-grid">
+                    <div class="card feature-item">
+                        <div class="icon-bg" style="background-color: var(--color-secondary); color: #fff; width: 70px; height: 70px; margin: 0 auto 20px; display: flex; justify-content: center; align-items: center; border-radius: 50%; box-shadow: var(--shadow-soft);">
+                            <i data-lucide="book-open" style="width: 30px; height: 30px;"></i>
+                        </div>
+                        <h4>Learning Resources</h4>
+                        <p>Access curated videos, downloadable guides, and interactive code sandboxes.</p>
+                    </div>
+                    <div class="card feature-item">
+                        <div class="icon-bg" style="background-color: var(--color-accent); color: #fff; width: 70px; height: 70px; margin: 0 auto 20px; display: flex; justify-content: center; align-items: center; border-radius: 50%; box-shadow: var(--shadow-soft);">
+                            <i data-lucide="zap" style="width: 30px; height: 30px;"></i>
+                        </div>
+                        <h4>Assessments & Quizzes</h4>
+                        <p>Solidify your knowledge with chapter quizzes, final exams, and practical assignments.</p>
+                    </div>
+                    <div class="card feature-item">
+                        <div class="icon-bg" style="background-color: var(--color-primary); color: #fff; width: 70px; height: 70px; margin: 0 auto 20px; display: flex; justify-content: center; align-items: center; border-radius: 50%; box-shadow: var(--shadow-soft);">
+                            <i data-lucide="message-square" style="width: 30px; height: 30px;"></i>
+                        </div>
+                        <h4>Community Platform</h4>
+                        <p>Engage with peers and mentors in forums, group chats, and live Q&A sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="container">
+                <h2 class="text-center">What They <span class="gradient-text">Say</span></h2>
+                <div class="testimonial-carousel">
+                    
+                    <div class="card testimonial-card">
+                        <img src="img/student-female1.jpg" alt="Student feedback" class="student-image" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid var(--color-primary); display: block; margin-left: auto; margin-right: auto;">
+                        <p>"The mentorship program completely changed my career trajectory. I got my dream job in six months, thanks to the practical projects and personalized guidance!"</p>
+                        <h4>Sarah K.</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-primary);">Full Stack Developer Graduate</p>
+                    </div>
+
+                    <div class="card testimonial-card" style="display: none;">
+                        <img src="img/student-male1.jpg" alt="Student feedback" class="student-image" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid var(--color-primary); display: block; margin-left: auto; margin-right: auto;">
+                        <p>"I love the flexibility and the quality of the content. The assessments are challenging but fair, making sure I truly master each topic before moving on."</p>
+                        <h4>Mark D.</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-primary);">Data Science Student</p>
+                    </div>
+
+                    <div class="card testimonial-card" style="display: none;">
+                        <img src="img/student-male2.jpg" alt="Student feedback" class="student-image" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid var(--color-primary); display: block; margin-left: auto; margin-right: auto;">
+                        <p>"As a mentor, SkillConnect provides excellent tools to manage my students and deliver high-impact coaching. It's rewarding and professionally stimulating."</p>
+                        <h4>Alex T.</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-primary);">Certified Mentor (Design)</p>
+                    </div>
+
+                </div>
+                <div class="testimonial-nav">
+                    <button id="prev-testimonial" aria-label="Previous testimonial"><i data-lucide="chevron-left"></i></button>
+                    <button id="next-testimonial" aria-label="Next testimonial"><i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-resources" id="news">
+            <div class="container text-center">
+                <h2>Latest <span class="gradient-text">News & Resources</span></h2>
+                <p style="color: var(--color-text-secondary);">Stay updated with the newest trends and platform features.</p>
+
+                <div class="news-grid">
+                    <div class="card news-card">
+                        <img src="images/tourbox-lwiESfzrVM4-unsplash.jpg" alt="Blog post image" loading="lazy">
+                        <h4>5 Essential Skills for 2024</h4>
+                        <p>An in-depth look at the most in-demand skills you need to learn this year to boost your career.</p>
+                        <a href="#">Read More &rarr;</a>
+                    </div>
+                    <div class="card news-card">
+                        <img src="images/daniel-korpai-mxPiMiz7KCo-unsplash.jpg" alt="Blog post image" loading="lazy">
+                        <h4>Mentor Spotlight: Jane's Journey</h4>
+                        <p>We interview Jane Doe, one of our top mentors, on her advice for new students and her teaching philosophy.</p>
+                        <a href="#">Read More &rarr;</a>
+                    </div>
+                    <div class="card news-card">
+                        <img src="images/amelie-mourichon-sv8oOQaUb-o-unsplash.jpg" alt="Blog post image" loading="lazy">
+                        <h4>New AI Course Launched!</h4>
+                        <p>Our brand new "Applied Artificial Intelligence" course is now available, featuring live projects and top instructors.</p>
+                        <a href="#">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">SkillConnect</div>
+                    <p style="color: #ccc;">Unlock Your Potential. Let’s Skill Up!</p>
+                    
+                    <h5 style="margin-top: 30px;">Newsletter</h5>
+                    <p style="color: #ccc; font-size: 0.9rem;">Subscribe for our latest news and offers.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required style="padding: 12px 20px; border: none; outline: none; flex-grow: 1; font-size: 1rem; border-radius: 50px 0 0 50px;">
+                        <button type="submit" class="btn btn-primary" style="border-radius: 0 50px 50px 0; padding: 12px 25px; min-width: 120px;">Subscribe</button>
+                    </form>
+                    <div id="subscribe-message" style="margin-top: 10px; font-size: 0.9rem; color: #fff;"></div>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="mentors.html">Find a Mentor</a></li>
+                        <li><a href="blog.html">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="helpc.html">Help Center</a></li>
+                        <li><a href="career.html">Career Opportunities</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h5>Policies</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="termsofservice.html">Terms of Service</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2025 SkillConnect. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
