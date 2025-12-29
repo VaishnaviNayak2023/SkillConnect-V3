@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community Forum UI</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- LEFT -->
+    <aside class="left">
+      <div class="nav-card">
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px">
+          <input id="searchInput" type="search" placeholder="Search discussions, topics, or users..." style="flex:1;padding:10px;border-radius:10px;border:1px solid var(--border)">
+          <button class="new-post">+ New Post</button>
+        </div>
+
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+          <div class="pill">Home</div>
+          <div class="pill">My Courses</div>
+          <div class="pill">Messages</div>
+        </div>
+
+        <div style="font-weight:700;margin-bottom:8px">Categories</div>
+        <div class="categories">
+          <div class="category">Mathematics</div>
+          <div class="category">Computer Science</div>
+          <div class="category">Physics</div>
+          <div class="category">Chemistry</div>
+          <div class="category">Biology</div>
+          <div class="category">Literature</div>
+          <div class="category">History</div>
+          <div class="category">Economics</div>
+        </div>
+      </div>
+
+      <div class="nav-card" style="text-align:center">
+        <div style="font-weight:700;margin-bottom:8px">Quick Links</div>
+        <div style="display:flex;justify-content:space-between;gap:8px">
+          <button class="pill">My Posts</button>
+          <button class="pill">Saved</button>
+          <button class="pill">Settings</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER FEED -->
+    <main class="feed" id="feed">
+      <!-- card template repeated -->
+      <article class="card post" data-title="Help understanding recursive algorithms" data-body="I'm struggling to grasp the concept of recursion in my CS course. Can someone explain it with simple examples? I understand the basic idea but" data-tags="algorithms,recursion,help">
+        <div class="meta">
+          <div class="avatar">JP</div>
+          <div>
+            <div class="name">Jessica Park <span class="muted" style="font-weight:500;font-size:12px">· Student</span></div>
+            <div class="muted" style="font-size:12px">Computer Science</div>
+          </div>
+          <div class="time muted">2 hours ago</div>
+        </div>
+        <div class="title">Help understanding recursive algorithms</div>
+        <div class="excerpt">I'm struggling to grasp the concept of recursion in my CS course. Can someone explain it with simple examples? I understand the basic idea but...</div>
+        <div class="tags">
+          <div class="tag">algorithms</div>
+          <div class="tag">recursion</div>
+          <div class="tag">help</div>
+        </div>
+        <div class="card-footer">
+          <button class="replies-btn" data-replies="12" title="Replies"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="replies-count">12</span> replies</button>
+          <button class="like-btn" data-likes="24" title="Like"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="likes-count">24</span></button>
+        </div>
+      </article>
+
+      <article class="card post" data-title="Best practices for studying calculus?" data-body="What are your top strategies for mastering calculus? I find derivatives manageable but integrals are really challenging. Looking for study tips" data-tags="calculus,study-tips,resources">
+        <div class="meta">
+          <div class="avatar">SC</div>
+          <div>
+            <div class="name">Dr. Sarah Chen <span class="role">Instructor</span></div>
+            <div class="muted" style="font-size:12px">Mathematics</div>
+          </div>
+          <div class="time muted">4 hours ago</div>
+        </div>
+        <div class="title">Best practices for studying calculus?</div>
+        <div class="excerpt">What are your top strategies for mastering calculus? I find derivatives manageable but integrals are really challenging. Looking for study tips.</div>
+        <div class="tags">
+          <div class="tag">calculus</div>
+          <div class="tag">study-tips</div>
+          <div class="tag">resources</div>
+        </div>
+        <div class="card-footer">
+          <button class="replies-btn" data-replies="28"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="replies-count">28</span> replies</button>
+          <button class="like-btn" data-likes="45"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="likes-count">45</span></button>
+        </div>
+      </article>
+
+      <article class="card post" data-title="Quantum entanglement explained simply" data-body="After reading several articles, I'm still confused about quantum entanglement. Can someone break it down in layman's terms? What are the practical" data-tags="quantum-physics,entanglement,el5">
+        <div class="meta">
+          <div class="avatar">MT</div>
+          <div>
+            <div class="name">Michael Torres <span class="muted" style="font-weight:500;font-size:12px">· Student</span></div>
+            <div class="muted" style="font-size:12px">Physics</div>
+          </div>
+          <div class="time muted">6 hours ago</div>
+        </div>
+        <div class="title">Quantum entanglement explained simply</div>
+        <div class="excerpt">After reading several articles, I'm still confused about quantum entanglement. Can someone break it down in layman's terms? What are the practical...</div>
+        <div class="tags">
+          <div class="tag">quantum-physics</div>
+          <div class="tag">entanglement</div>
+        </div>
+        <div class="card-footer">
+          <button class="replies-btn" data-replies="19"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="replies-count">19</span> replies</button>
+          <button class="like-btn" data-likes="56"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="likes-count">56</span></button>
+        </div>
+      </article>
+
+      <article class="card post" data-title="Organic chemistry mnemonics thread" data-body="Let's share our favorite mnemonics for remembering organic chemistry reactions and functional groups! I'll start: OIL RIG (Oxidation Is Loss," data-tags="organic-chemistry,mnemonics,study-tips">
+        <div class="meta">
+          <div class="avatar">EJ</div>
+          <div>
+            <div class="name">Emma Johnson <span class="role">Instructor</span></div>
+            <div class="muted" style="font-size:12px">Chemistry</div>
+          </div>
+          <div class="time muted">8 hours ago</div>
+        </div>
+        <div class="title">Organic chemistry mnemonics thread</div>
+        <div class="excerpt">Let's share our favorite mnemonics for remembering organic chemistry reactions and functional groups! I'll start: OIL RIG (Oxidation Is Loss...)</div>
+        <div class="tags">
+          <div class="tag">organic-chemistry</div>
+          <div class="tag">mnemonics</div>
+          <div class="tag">study-tips</div>
+        </div>
+        <div class="card-footer">
+          <button class="replies-btn" data-replies="34"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="replies-count">34</span> replies</button>
+          <button class="like-btn" data-likes="67"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="likes-count">67</span></button>
+        </div>
+      </article>
+
+      <!-- a couple more smaller cards -->
+      <article class="card post" data-title="Machine learning project ideas for beginners" data-body="I've completed Andrew Ng's ML course and want to build my first project. What are some beginner-friendly ML projects that would look good in a portfolio?" data-tags="machine-learning,projects,beginner">
+        <div class="meta">
+          <div class="avatar">AK</div>
+          <div>
+            <div class="name">Alex Kumar <span class="muted" style="font-weight:500;font-size:12px">· Student</span></div>
+            <div class="muted" style="font-size:12px">Computer Science</div>
+          </div>
+          <div class="time muted">10 hours ago</div>
+        </div>
+        <div class="title">Machine learning project ideas for beginners</div>
+        <div class="excerpt">I've completed Andrew Ng's ML course and want to build my first project. What are some beginner-friendly ML projects that would look good in a portfolio?</div>
+        <div class="tags">
+          <div class="tag">machine-learning</div>
+          <div class="tag">projects</div>
+          <div class="tag">beginner</div>
+        </div>
+        <div class="card-footer">
+          <button class="replies-btn" data-replies="23"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="replies-count">23</span> replies</button>
+          <button class="like-btn" data-likes="41"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="likes-count">41</span></button>
+        </div>
+      </article>
+
+      <article class="card post" data-title="Discussion: The causes of World War I" data-body="In preparation for our exam, I'd like to discuss the multiple factors that led to WWI. Beyond the assassination of Archduke Franz Ferdinand, what were" data-tags="world-war1,history,discussion">
+        <div class="meta">
+          <div class="avatar">DW</div>
+          <div>
+            <div class="name">Prof. David Wilson <span class="role">Instructor</span></div>
+            <div class="muted" style="font-size:12px">History</div>
+          </div>
+          <div class="time muted">12 hours ago</div>
+        </div>
+        <div class="title">Discussion: The causes of World War I</div>
+        <div class="excerpt">In preparation for our exam, I'd like to discuss the multiple factors that led to WWI. Beyond the assassination of Archduke Franz Ferdinand...</div>
+        <div class="tags">
+          <div class="tag">world-war1</div>
+          <div class="tag">history</div>
+        </div>
+        <div class="card-footer">
+          <button class="replies-btn" data-replies="16"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="replies-count">16</span> replies</button>
+          <button class="like-btn" data-likes="29"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="likes-count">29</span></button>
+        </div>
+      </article>
+    </main>
+
+    <!-- RIGHT -->
+    <aside class="right">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <div style="font-weight:700">Top Contributors</div>
+          <div class="muted" style="font-size:13px">Week</div>
+        </div>
+        <div class="contributors">
+          <div class="small-item"><div class="avatar">SC</div><div class="meta-right"><div class="cname">Dr. Sarah Chen</div><div class="count">247 posts · Instructor</div></div></div>
+          <div class="small-item"><div class="avatar">MT</div><div class="meta-right"><div class="cname">Michael Torres</div><div class="count">189 posts · Student</div></div></div>
+          <div class="small-item"><div class="avatar">EJ</div><div class="meta-right"><div class="cname">Emma Johnson</div><div class="count">156 posts · Instructor</div></div></div>
+          <div class="small-item"><div class="avatar">AK</div><div class="meta-right"><div class="cname">Alex Kumar</div><div class="count">134 posts · Student</div></div></div>
+        </div>
+      </div>
+
+      <div class="card trending">
+        <div style="font-weight:700;margin-bottom:8px">Trending Discussions</div>
+        <ol>
+          <li><strong>Quantum Computing Basics</strong><span class="muted"> · Computer Science · 45 replies</span></li>
+          <li><strong>Calculus Study Group</strong><span class="muted"> · Mathematics · 38 replies</span></li>
+          <li><strong>Machine Learning Projects</strong><span class="muted"> · Computer Science · 31 replies</span></li>
+          <li><strong>Organic Chemistry Tips</strong><span class="muted"> · Chemistry · 27 replies</span></li>
+          <li><strong>World War II Discussion</strong><span class="muted"> · History · 24 replies</span></li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div style="font-weight:700;margin-bottom:8px">Recent Activity</div>
+        <div class="muted" style="font-size:13px;line-height:1.5">
+          Sarah Chen replied to <strong>Neural Networks</strong> · 2 minutes ago<br>
+          Michael Torres started a new discussion · 15 minutes ago<br>
+          Emma Johnson liked your post · 1 hour ago
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="forum.js"></script>
+</body>
+</html>
